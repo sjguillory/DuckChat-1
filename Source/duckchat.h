@@ -29,7 +29,7 @@ typedef int text_t;
 #define REQ_SAY 4
 #define REQ_LIST 5
 #define REQ_WHO 6
-#define REQ_KEEP_ALIVE 7 /* Only needed by graduate students */
+#define REQ_KEEP_ALIVE 7
 #define SERVER_REQ_JOIN 8
 #define SERVER_REQ_LEAVE 9
 #define SERVER_REQ_SAY 10
