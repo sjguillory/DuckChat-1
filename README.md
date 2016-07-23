@@ -1,4 +1,4 @@
-<html><body>
+
 <h1>DuckChat</h1>
 <h2>Compilation:</h2>
   I have provided a makefile which loads the necessary libraries for socket connections and UUID creation, and creates server and client 64-bit executables.
@@ -46,4 +46,4 @@ Server Usage and Examples:
   Since the first server program specified port 4001 as a direct neighbor, the server on port 4001 will also be expected to specify the server on port 4000 as a direct neighbor.
   Note that if a server disconnects unexpectedly, direct neighbors will not recieve refresh messages from that server, and will remove any stored user and channel data and stop forwarding messages for those users and channels.  Once the server comes back online, users will have to login and rejoin their channels.
     
-  The default period for refresh messages is 60 seconds.</body></html>
+  The default period for refresh messages is 60 seconds.
