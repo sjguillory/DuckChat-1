@@ -33,14 +33,14 @@ Client Usage & Example:
 Server Usage and Examples:
   There are two options to start a server network:
     
-    1) You can edit and run the ./start_and_run.sh script which launches a capital H-shaped topology on localhost ports by default.  The shape of the network is important because only neighboring servers communicate with eachother, but forward messages from other neighbors intelligently.
+  1) You can edit and run the ./start_and_run.sh script which launches a capital H-shaped topology on localhost ports by default.  The shape of the network is important because only neighboring servers communicate with eachother, but forward messages from other neighbors intelligently.
     
-    2) You can run the server executable directly and specify a hostname and port. Ex:
-    ./server localhost 4000
-    Note that if you are creating a network of servers this way, you need to specify the direct neighbor server IP and port at the same time. Ex:
-    ./server localhost 4000 localhost 4001 /*Now these servers will forward joins, logins, leaves, say messages, and refresh messages to eachother when neccessary*/
-    However, you still need to start the server program on the specified IP and port:
-    ./server localhost 4001 localhost 4000 /*Since the first server program specified port 4001 as a direct neighbor, the server on port 4001 will also be expected to specify the server on port 4000 as a direct neighbor.*/
-    Note that if a server disconnects unexpectedly, direct neighbors will not recieve refresh messages from that server, and will remove any stored user and channel data and stop forwarding messages for those users and channels.  Once the server comes back online, users will have to login and rejoin their channels.
+  2) You can run the server executable directly and specify a hostname and port. Ex:
+  ./server localhost 4000
+  Note that if you are creating a network of servers this way, you need to specify the direct neighbor server IP and port at the same time. Ex:
+  ./server localhost 4000 localhost 4001 /*Now these servers will forward joins, logins, leaves, say messages, and refresh messages to eachother when neccessary*/
+  However, you still need to start the server program on the specified IP and port:
+  ./server localhost 4001 localhost 4000 /*Since the first server program specified port 4001 as a direct neighbor, the server on port 4001 will also be expected to specify the server on port 4000 as a direct neighbor.*/
+  Note that if a server disconnects unexpectedly, direct neighbors will not recieve refresh messages from that server, and will remove any stored user and channel data and stop forwarding messages for those users and channels.  Once the server comes back online, users will have to login and rejoin their channels.
     
-    The default period for refresh messages is 60 seconds.
+  The default period for refresh messages is 60 seconds.
