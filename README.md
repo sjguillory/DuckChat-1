@@ -7,9 +7,9 @@ Compilation:
 
 Client Usage & Example:
   (Setup)
-      ./client [IP of listening server] [Port # for server] [desired username]
-      ./client 127.0.0.1 4444 Connor
-      ./client localhost 4444 Connor
+        ./client [IP of listening server] [Port # for server] [desired username]
+        ./client 127.0.0.1 4444 Connor
+        ./client localhost 4444 Connor
   Note that you must have an active server listening on the designated IP and port or the client connection will be refused.
   The port number designated must be able to recieve UDP messages over the firewall, unless both server and client are running on the localhost.
   
