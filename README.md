@@ -38,13 +38,14 @@
     
   2) You can run the server executable directly and specify a hostname and port. Ex:
   <br>    ./server localhost 4000
-  
+ 
   <br>Note that if you are creating a network of servers this way, you need to specify the direct neighbor server IP and port at the same time. Ex:
   <br>    ./server localhost 4000 localhost 4001 
   
   <br>Now these servers will forward joins, logins, leaves, say messages, and refresh messages to eachother when neccessary.
   <br>However, you still need to start the server program on the specified IP and port:
   <br>    ./server localhost 4001 localhost 4000 
+
   <br>Since the first server program specified port 4001 as a direct neighbor, the server on port 4001 will also be expected to specify the server on port 4000 as a direct neighbor.
   
   <br>Note that if a server disconnects unexpectedly, direct neighbors will not recieve refresh messages from that server, and will remove any stored user and channel data and stop forwarding messages for those users and channels.  Once the server comes back online, users will have to login and rejoin their channels.
